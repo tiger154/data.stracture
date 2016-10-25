@@ -1,4 +1,4 @@
-package jeonhwan.data.linked_list;
+package jeonhwan.data;
 
 /**
  * Test main
