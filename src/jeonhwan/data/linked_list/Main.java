@@ -1,7 +1,7 @@
 package jeonhwan.data.linked_list;
 
 /**
- * Created by Administrator on 2016-10-24.
+ * Test main
  */
 public class Main {
 
