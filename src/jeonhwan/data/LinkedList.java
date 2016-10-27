@@ -1,12 +1,20 @@
 package jeonhwan.data;
 
 /**
- * LinkedList Data structure [implement core API]
+ * Singly LinkedList Data structure [implement core API]
+ *
  *  - void addFirstNode(Object input)
  *  - void addLastNode(Object input)
- *  - void addAfterNode(Object niddel, Object input)
+ *  - void addAfterNode(Object niddel, Object input) // insert by value, I use here prev
  *  - Node search(Node source, Object input)
  *  - void remove(Object niddel)
+ *
+ *  void addAfterNode(int index, Object input)
+ *  Node search(int index)
+ *  int indexOf(int index)
+ *  void removeFirst()
+ *  void removeLast()
+ *
  */
 public class LinkedList {
     private Node head;
@@ -16,7 +24,7 @@ public class LinkedList {
     public class Node {
         private Object data;
         private Node next;
-        private Node prev;
+        private Node prev; // this is not used like duble linked list but for search by value we use
         public Node(Object input) {
             this.data = input;
             this.next = null;
@@ -87,7 +95,7 @@ public class LinkedList {
                 return result;
             } else {
                 //System.out.println("run again with next node" + source.next.data.toString());
-                source.next.prev = source;
+                source.next.prev = source; // assign prev node
                 return search(source.next, input);
             }
         }
